@@ -5,8 +5,461 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="css/index.css">
     <title>首页</title>
+    <style>
+        html,
+        body,
+        p {
+            margin: 0;
+            padding: 0;
+            border: none;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        header {
+            width: 1200px;
+            height: 170px;
+            margin: 0 auto;
+            line-height: 170px;
+            /* border: 1px solid red; */
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        ul,
+        li {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .clear {
+            clear: both;
+            height: 0;
+        }
+
+        .logo {
+            width: 242px;
+            height: 70px;
+            float: left;
+            margin-top: 50px;
+        }
+
+        .hd_title {
+            color: #999999;
+            float: left;
+            font-size: 48px;
+        }
+
+        .line {
+            width: 3px;
+            height: 60px;
+            margin: 58px 33px;
+            background-color: #999999;
+            float: left;
+        }
+
+        .hd_phone {
+            width: 486px;
+            height: 54px;
+            float: right;
+            margin-top: 57px;
+        }
+
+        nav {
+            width: 100%;
+            height: 70px;
+            background-color: #558ed5;
+        }
+
+        nav ul {
+            width: 1200px;
+            height: 70px;
+            margin: 0 auto;
+            line-height: 70px;
+            font-size: 16px;
+        }
+
+        nav ul li {
+            width: 120px;
+            float: left;
+            color: white;
+            text-align: center;
+        }
+
+        nav ul li a {
+            width: 120px;
+            color: white;
+        }
+
+        .active {
+            background-color: #7dc910;
+        }
+
+        .banner img {
+            width: 100%;
+            /* height: 600px; */
+        }
+
+        .stone_info {
+            width: 1200px;
+            margin: 60px auto;
+        }
+
+        .title {
+            width: 100%;
+            font-size: 60px;
+            text-align: center;
+        }
+
+        .title span {
+            color: #558ed5;
+        }
+
+        .explain span:nth-child(2) {
+            display: inline-block;
+            width: 450px;
+            height: 50px;
+            line-height: 50px;
+            margin: 20px 20px 30px 20px;
+            text-align: center;
+            font-size: 28px;
+            background-color: #f2f2f2;
+            border-radius: 8px;
+        }
+
+        .explain span:nth-child(1),
+        .explain span:nth-child(3) {
+            display: inline-block;
+            width: 350px;
+            height: 3px;
+            background-color: #eeeeee;
+            position: relative;
+            top: -8px;
+        }
+
+        .img_show {
+            width: 1200px;
+            position: relative;
+        }
+
+        .img_show img:nth-child(1) {
+            width: 605px;
+        }
+
+        .img_show span:nth-child(2) {
+            display: inline-block;
+            width: 490px;
+            font-size: 16px;
+            position: absolute;
+            top: 100px;
+            right: 50px;
+            line-height: 28px;
+        }
+
+        .img_show img:nth-child(3),
+        .img_show img:nth-child(4) {
+            width: 333px;
+            position: absolute;
+            bottom: 50px;
+        }
+
+        .img_show img:nth-child(3) {
+            right: 356px;
+
+        }
+
+        .img_show img:nth-child(4) {
+            right: 0;
+        }
+
+        .process img {
+            width: 100%;
+        }
+
+        .eng {
+            text-align: center;
+            color: #999999;
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+
+        .product {
+            width: 100%;
+            padding: 60px 0;
+            background-color: #eeeeee;
+        }
+
+        .product_img,
+        .product_adv {
+            width: 1200px;
+            height: 985px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 45px;
+        }
+
+        .product_ul {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .product_ul li {
+            text-align: center;
+        }
+
+        .product_ul li p {
+            font-size: 24px;
+        }
+
+        .product_ul li img {
+            width: 18px;
+            height: 8px;
+        }
+
+        .hover {
+            color: #558ed5;
+        }
+
+        .product_ul1,
+        .product_advantageul {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .product_ul1 li {
+            width: 530px;
+            height: 370px;
+            margin-top: 50px;
+        }
+
+        .product_ul1 li:nth-child(2n+2),
+        .product_advantageul li:nth-child(2n+2) {
+            margin-left: 50px;
+        }
+
+        .product_ul1 li img {
+            width: 530px;
+        }
+
+        .product_ul1 li p {
+            width: 530px;
+            height: 65px;
+            line-height: 65px;
+            text-align: center;
+            color: #999999;
+            background-color: #eeeeee;
+        }
+
+        .margin-top {
+            margin-top: 60px;
+        }
+
+        .product_adv {
+            height: 560px;
+        }
+
+        .product_advantageul li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .product_advantageul li {
+            width: 530px;
+            height: 190px;
+            margin-bottom: 50px;
+        }
+
+        .advantage_img {
+            width: 190px;
+        }
+
+        .advantage {
+            margin-left: 45px;
+        }
+
+        .advantage p:nth-child(1) {
+            color: #558ed5;
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .advantage p:nth-child(2) {
+            font-size: 16px;
+        }
+
+        .sec {
+            width: 100%;
+            height: 600px;
+            background-color: #558ed5;
+            color: white;
+            padding-top: 60px;
+            position: relative;
+        }
+
+        .sec .eng,.case .eng,.connect .eng {
+            color: white;
+        }
+
+        .sec .title,.case .title,.connect .title {
+            margin: 0;
+        }
+
+        .sec p:nth-child(3) {
+            text-align: center;
+            font-size: 16px;
+        }
+
+        .sec img {
+            position: absolute;
+            bottom: -50px;
+            left: 50%;
+            margin-left: -620px;
+        }
+
+        .serve .title {
+            margin-top: 110px;
+        }
+
+        .serve {
+            width: 100%;
+        }
+        .service_ul{
+            width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        .service_ul li{
+            width: 250px;
+            margin-left: 66px;
+            margin-bottom: 66px;
+            text-align: center;
+        }
+        .service_ul li:nth-child(4n+1){
+            margin-left: 0;
+        }
+        .service_ul li div p:nth-child(1){
+            font-size: 24px;
+            font-weight: bold;
+            margin: 30px 0 10px 0;
+        }
+        .service_ul li div p:nth-child(2){
+            font-size: 16px;
+            color: #999999;
+        }
+        .case{
+            width: 100%;
+            height: 1140px;
+            background-color: #558ed5;
+            color: white;
+            padding-top: 60px;
+        }
+        .case_img1,.case_img2{
+            width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+        }
+        .case_img2{
+            margin-top: 8px;
+        }
+        .case_img2 img{
+            width:393px;
+            height: 215px;
+
+        }
+        .case_left{
+            width: 766px;
+            height: 562px;
+        }
+        .case_left img{
+            width: 100%;
+        }
+        .case_right{
+            width: 424px;
+            height: 276px;
+        }
+        .case_right img:nth-child(2){
+            margin-top: 5px;
+        }
+        .more_case{
+            width: 282px;
+            height: 65px;
+            margin: 30px auto;
+            line-height: 65px;
+            color: white;
+            border-radius: 5px;
+            text-align: center;
+            border: 1px solid white;
+        }
+        .know{
+            width: 100%;
+            padding-bottom: 60px;
+        }
+        .know_ul{
+            width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        .know_ul li{
+            width: 600px;
+            text-align: left;
+            font-size: 28px;
+            color: #999999;
+            margin-top: 15px;
+        }
+        .connect{
+            width: 100%;
+            height: 408px;
+            background-color: #558ed5;
+            color: white;
+            padding-top: 60px;
+        }
+        .connect_ul{
+            width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .connect_ul li {
+            text-align: center;
+            margin-top: 10px;
+        }
+        footer{
+            width: 100%;
+            height: 120px;
+            color: #999999;
+            text-align: center;
+            padding-top: 40px;
+        }
+        .top{
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            text-align: center;
+            display: none;
+        }
+        .top img{
+            width: 32px;
+        }
+        .top p{
+            font-size: 16px;
+        }
+    </style>
 </head>
 
 <body>
@@ -245,6 +698,28 @@
           <p>地址：上海市青浦区华腾路1218号2号楼 </p>
           <p>Copyright@赛冠工程 www.saiguangroup.com 沪ICP备0</p>
     </footer>
+    <div class="top">
+        <img src="./images/top.png" alt="">
+        <p>返回顶部</p>
+    </div>
+    <script src="./js/jquery-2.1.4.min.js"></script>
+    <script>
+        $(function () {
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > 100) {
+                $(".top").fadeIn(500);
+            }
+            else {
+                $(".top").fadeOut(500);
+            }
+        });
+
+        $(".top").click(function () {
+            $('body,html').animate({scrollTop: 0}, 100);
+            return false;
+        });
+    });
+    </script>
 </body>
 
 </html>
